@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S-Note</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="greyB" style="display: none;">
+
+    </div>
+
+    <div id="addNoteScreen" style="display: none;">
+        <form>
+            <input type="text" class="formI form-control" id="noteBody" placeholder="Enter your note here..." required><br>
+            <input type="text" class="formI form-control" id="noteFooter" placeholder="Footer"><br>
+            <input class="formI btn btn-primary" type="button" value="Create" onclick="addNote(), addNoteScreen(), changeClose()">
+            <input class="formI btn btn-danger" type="button" value="Create" onclick="addCard(), addNoteScreen(), changeClose()">
+        </form>
+    </div>
+
+    <div id="editNoteScreen" style="display: none;">
+        <form>
+            <input type="text" class="formI form-control" id="editNoteBody" placeholder="Enter your note here..." required><br>
+            <input type="text" class="formI form-control" id="editNoteFooter" placeholder="Footer"><br>
+        </form>
+    </div>
+
+    <div id="editCardScreen" style="display: none;">
+        <form>
+            <input type="text" class="formI form-control" id="editCardBody" placeholder="Enter your question here..." required><br>
+            <input type="text" class="formI form-control" id="editCardFooter" placeholder="Answer"><br>
+        </form>
+    </div>
+
+    <main class="container">
+        <div class="holder co2 row">
+
+
+
+
+        </div>
+    </main>
+
+    <main class="container-fluid">
+        <div class="row">
+            <div class="pad col-12"></div>
+        </div>
+    </main>
+
+    <footer class="closeI container-fluid text-end fixed-bottom">
+        <div class="row">
+            <div class="col-12">
+                <button class="close btn btn-danger btn-lg" onclick="addNoteScreen(), changeClose()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path d="M1.293 1.293a1 1 0 0 1 1.414 0L8 6.586l5.293-5.293a1 1 0 1 1 1.414 1.414L9.414 8l5.293 5.293a1 1 0 0 1-1.414 1.414L8 9.414l-5.293 5.293a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707a1 1 0 0 1 0-1.414z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <footer class="addI container-fluid text-end fixed-bottom">
+        <div class="row">
+            <div class="col-12">
+                <button class="add btn btn-primary btn-lg" onclick="addNoteScreen(), changeAdd()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                        <path d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
